@@ -79,7 +79,7 @@ This blueprint will use a periodic Logic function to send an alert event when a 
       ![Scheduled function](./images/logic-function/scheduled-function.png)
    4. Enter a name and description for your scheduled Logic function:
       ![Logic name and description](./images/logic-function/name-logic-function.png)
-   5. Paste in the following Javascript code making sure to update `LEDGER_NAME` with the name of your offline device Ledger created in a previous step.
+   5. Paste in the following Javascript code making sure to update `LEDGER_NAME` with the name of your offline device Ledger created in a previous step. This code can also be found in `logic-function.js`.
       ![Populate Logic function](./images/logic-function/populate-logic-function.png)
 
       ```js
