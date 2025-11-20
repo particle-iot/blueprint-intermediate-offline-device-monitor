@@ -5,7 +5,7 @@ category: "Blueprint Basics"
 expertiseLevel: "Beginner"               # Beginner | Intermediate | Advanced
 tags: ["Publish", "Function", "Console"]
 icon: assets/offline.svg                    # relative path to an image or SVG
-gitrepo: https://github.com/particle-iot/blueprint-template
+gitrepo: https://github.com/particle-iot/blueprint-intermediate-offline-device-monitor/
 name: "Blueprint Template"
 shortDescription: "A sample template for creating new Blueprints"
 version: 1.0.0                           # use SemVer
