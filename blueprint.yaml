@@ -1,31 +1,53 @@
 # blueprint.yaml
-slug: blueprint-template
+slug: blueprint-intermediate-offline-device-monitor
 type: Tutorial
-category: "Blueprint Basics"
-expertiseLevel: "Beginner"               # Beginner | Intermediate | Advanced
-tags: ["Publish", "Function", "Console"]
-icon: assets/offline.svg                    # relative path to an image or SVG
+category: "Cloud Services"
+expertiseLevel: "Intermediate"          # Beginner | Intermediate | Advanced
+tags: ["Logic", "Ledger", "Alerts", "Offline Monitoring"]
+icon: assets/offline.svg                # relative path to an image or SVG
 gitrepo: https://github.com/particle-iot/blueprint-intermediate-offline-device-monitor/
-name: "Blueprint Template"
-shortDescription: "A sample template for creating new Blueprints"
-version: 1.0.0                           # use SemVer
-models: []                               # e.g., ["P2", "Boron 404X"]
-language: ["C++"]
-cloudServices: []                        # e.g., ["IFTTT", "Google Sheets"]
-integrations: []                         # e.g., ["Webhook"]
+name: "Intermediate - Offline Device Monitor"
+shortDescription: "Use Logic and Ledger to detect devices that stay offline too long and trigger alerts."
+version: 1.0.0                          # use SemVer
+models: []                              # e.g., ["P2", "Boron 404X"]
+language: ["C++", "JavaScript"]
+cloudServices: ["Logic", "Ledger"]
+integrations: []                        # e.g., ["Webhook", "Slack", "Twilio"]
 supportedDevices:
   - name: Any Wi-Fi or Cellular Device
-    link: https://docs.particle.io
+    link: https://docs.particle.io/hardware/
 webIdeLink:
 webSetupLink:
 hardwareDependencies:
-  - name: Supported device
+  - name: Particle device (Photon 2, Boron, etc.)
   - name: USB cable
 introduction: |
-  Quickstart blueprint.
+  This intermediate blueprint shows how to combine the Logic and Ledger cloud services
+  to build an automated offline device monitor for a product fleet.
 description: |
-  This tutorial shows how to create a new blueprint.
+  This blueprint uses a scheduled Logic function and a Cloud Ledger to monitor devices
+  in a product and alert you when they have been offline longer than a pre-defined period.
+
+  The Logic function periodically (for example, every 60 minutes) lists all devices in
+  a product, checks which devices are not currently connected, and compares their
+  `last_heard` timestamps against a time threshold. Devices that are both disconnected
+  and past the threshold are considered offline and added to an `offlineDevices` list.
+
+  A Cloud Ledger is used to persist the state of offline devices between Logic runs.
+  By comparing the current list of offline devices with the ledger’s stored list, the
+  function can detect newly-offline devices and publish a single `offline-device-alert`
+  event containing just those new entries. The ledger is then updated with the latest
+  offline device IDs so subsequent runs don’t repeatedly alert on the same devices.
+
+  This pattern is useful for product fleets where you need proactive visibility into
+  devices that have gone quiet, and want to trigger downstream notifications or
+  incident workflows without writing additional firmware logic.
 additionalResources:
+  - title: Particle Logic Service
+    link: https://docs.particle.io/reference/cloud-logic/
+  - title: Particle Ledger Service
+    link: https://docs.particle.io/reference/cloud-ledger/
   - title: Particle Dev Docs
     link: https://developer.particle.io/
+
 
