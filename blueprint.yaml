@@ -1,7 +1,7 @@
 # blueprint.yaml
 slug: blueprint-intermediate-offline-device-monitor
 type: Tutorial
-category: "Cloud Services"
+category: "Device integration and connectivity"
 expertiseLevel: "Intermediate"          # Beginner | Intermediate | Advanced
 tags: ["Logic", "Ledger", "Alerts", "Offline Monitoring"]
 icon: assets/offline.svg                # relative path to an image or SVG
