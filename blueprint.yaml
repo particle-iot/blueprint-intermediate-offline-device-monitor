@@ -1,6 +1,7 @@
 # blueprint.yaml
 slug: blueprint-intermediate-offline-device-monitor
 type: Tutorial
+<<<<<<< Updated upstream
 category: "Device integration and connectivity"
 expertiseLevel: "Intermediate"          # Beginner | Intermediate | Advanced
 tags: ["Logic", "Ledger", "Alerts", "Offline Monitoring"]
@@ -15,6 +16,20 @@ cloudServices:
   - name: Logic
   - name: Ledger
 integrations: []                        # e.g., ["Webhook", "Slack", "Twilio"]
+=======
+category: "Cloud basics"
+expertiseLevel: "Beginner"               # Beginner | Intermediate | Advanced
+tags: ["Publish", "Function", "Console"]
+icon: assets/hero.jpg                    # relative path to an image or SVG
+gitrepo: https://github.com/particle-iot/blueprint-template
+name: "Blueprint Template"
+shortDescription: "A sample template for creating new Blueprints"
+version: 1.0.0                           # use SemVer
+models: []                               # e.g., ["P2", "Boron 404X"]
+language: ["C++"]
+cloudServices: []
+integrations: []
+>>>>>>> Stashed changes
 supportedDevices:
   - name: Any Wi-Fi or Cellular Device
     link: https://docs.particle.io/hardware/
