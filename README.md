@@ -44,42 +44,42 @@ This blueprint will use a periodic Logic function to send an alert event when a 
 
 3. **Flash to your device:**
 
-   1. Configure project for your device using Particle Workbench and the command pallette (cmd / ctrl + shift + p):
+   - Configure project for your device using Particle Workbench and the command pallette (cmd / ctrl + shift + p):
       ![Configure project for device](./images/configure-project.png)
-   2. Select your device model and Device OS release:
+   - Select your device model and Device OS release:
       ![Select device](./images/configure-msom.png)
       ![Select device OS](./images/configure-device-os.png)
 
 4. **Create the Ledger instance**
 
-   1. Navigate to the "Ledger" cloud service:
+   - Navigate to the "Ledger" cloud service:
       ![Navigate to Ledger](./images/ledger/navigate-to-ledger.png)
-   2. Create a new Cloud Ledger:
+   - Create a new Cloud Ledger:
       ![Create new Ledger](./images/ledger/create-new-ledger.png)
       ![Choose cloud Ledger](./images/ledger/cloud-ledger.png)
-   3. Give the Ledger a name and choose the "Product" level scope. Make note of this name as it will have to be passed into the Logic function. In this case, we're choosing `offline-devices`. But, it can be anything as long as it's also correctly defined in the Logic function code.
+   - Give the Ledger a name and choose the "Product" level scope. Make note of this name as it will have to be passed into the Logic function. In this case, we're choosing `offline-devices`. But, it can be anything as long as it's also correctly defined in the Logic function code.
       ![Ledger name and scope](./images/ledger/ledger-name-description-scope.png)
 
 5. **Create an API user**
 
-   1. Navigate to "Teams" and create a new API user:
+   - Navigate to "Teams" and create a new API user:
       ![Create an API user](./images/api-user/create-api-user.png)
-   2. Name the API user and select the required scopes: `Devices`, `Product`, and `Ledger`:
+   - Name the API user and select the required scopes: `Devices`, `Product`, and `Ledger`:
       ![Name and API user and select scopes](./images/api-user/api-user-name-scope.png)
-   3. Store the API user's credentials:
+   - Store the API user's credentials:
       ![Store credentials](./images/api-user/store-credentials.png)
 
 6. **Create the Logic function**
 
-   1. Navigate to the "Logic" cloud service:
+   - Navigate to the "Logic" cloud service:
       ![Navigate to Logic](./images/logic-function/go-to-logic.png)
-   2. Select "Start with template":
+   - Select "Start with template":
       ![Start with template](./images/logic-function/start-with-template.png)
-   3. Choose the "Scheduled Function" template:
+   - Choose the "Scheduled Function" template:
       ![Scheduled function](./images/logic-function/scheduled-function.png)
-   4. Enter a name and description for your scheduled Logic function:
+   - Enter a name and description for your scheduled Logic function:
       ![Logic name and description](./images/logic-function/name-logic-function.png)
-   5. Paste in the following Javascript code making sure to update `LEDGER_NAME` with the name of your offline device Ledger created in a previous step. This code can also be found in `logic-function.js`.
+   - Paste in the following Javascript code making sure to update `LEDGER_NAME` with the name of your offline device Ledger created in a previous step. This code can also be found in `logic-function.js`.
       ![Populate Logic function](./images/logic-function/populate-logic-function.png)
 
       ```js
@@ -161,7 +161,7 @@ This blueprint will use a periodic Logic function to send an alert event when a 
       }
       ```
 
-   6. Define a schedule for your Logic function:
+   - Define a schedule for your Logic function:
       ![Schedule function](./images/logic-function/schedule-function.png)
 
 ---
