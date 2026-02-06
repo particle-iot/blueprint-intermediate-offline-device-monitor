@@ -11,9 +11,7 @@ shortDescription: "Use Logic and Ledger to detect devices that stay offline too 
 version: 1.0.0                          # use SemVer
 models: []                              # e.g., ["P2", "Boron 404X"]
 language: ["C++", "JavaScript"]
-cloudServices:
-  - name: Logic
-  - name: Ledger
+cloudServices: ["Logic", "Ledger"]
 integrations: []                        # e.g., ["Webhook", "Slack", "Twilio"]
 supportedDevices:
   - name: Any Wi-Fi or Cellular Device
