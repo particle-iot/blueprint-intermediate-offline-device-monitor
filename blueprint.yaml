@@ -6,7 +6,7 @@ expertiseLevel: "Intermediate"          # Beginner | Intermediate | Advanced
 tags: ["Logic", "Ledger", "Alerts", "Offline Monitoring"]
 icon: assets/offline.svg                # relative path to an image or SVG
 gitrepo: https://github.com/particle-iot/blueprint-intermediate-offline-device-monitor/
-name: "Intermediate - Offline Device Monitor"
+name: "Offline Device Monitor"
 shortDescription: "Use Logic and Ledger to detect devices that stay offline too long and trigger alerts."
 version: 1.0.0                          # use SemVer
 models: []                              # e.g., ["P2", "Boron 404X"]
